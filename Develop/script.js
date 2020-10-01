@@ -63,6 +63,21 @@ function writePassword() {
       'Error: number out of range; choose a length of at least 8 characters and no more than 128 characters'
     );
   }
+  var lCase = confirm('Would you like a Lowercase elements? ok or cancel');
+  var uCase = confirm('Would you like a Uppercase elements? ok or cancel');
+  var num = confirm('Would you like a Number elements? ok or cancel');
+  var sChar = confirm(
+    'Would you like Special Characters elements? ok or cancel'
+  );
+
+  if (lCase === false && uCase === false && num === false && sChar === false) {
+    alert('Error: must choose at least one option;');
+    lCase = confirm('Would you like a Lowercase elements? ok or cancel');
+    uCase = confirm('Would you like a Uppercase elements? ok or cancel');
+    num = confirm('Would you like a Number elements? ok or cancel');
+    sChar = confirm('Would you like Special Characters elements? ok or cancel');
+  }
+
   var password = generatePassword();
   var passwordText = document.querySelector('#password');
 
