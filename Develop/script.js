@@ -45,14 +45,19 @@ function arrPicker(array) {
 function generatePassword() {
   console.log(arrPicker(charArray));
 }
+
 function writePassword() {
+  // welcoming user and prepping to choose criteria
   alert('Welcome to the random password generator!');
-  alert(
-    'You are going to prompted to choose criteria for your uniquely generated password'
-  );
+  alert('Choose criteria for your uniquely generated password');
   var passLength = prompt(
     'Choose a length of at least 8 characters and no more than 128 characters'
   );
+  while (passLength < 8 || passLength > 128) {
+    passLength = prompt(
+      'Error: choose a length of at least 8 characters and no more than 128 characters'
+    );
+  }
   var password = generatePassword();
   var passwordText = document.querySelector('#password');
 
