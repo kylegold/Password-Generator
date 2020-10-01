@@ -53,9 +53,14 @@ function writePassword() {
   var passLength = prompt(
     'Choose a length of at least 8 characters and no more than 128 characters'
   );
+  if (typeof passLength !== 'number') {
+    passLength = prompt(
+      'Error: not a number; choose a length of at least 8 characters and no more than 128 characters'
+    );
+  }
   while (passLength < 8 || passLength > 128) {
     passLength = prompt(
-      'Error: choose a length of at least 8 characters and no more than 128 characters'
+      'Error: number out of range; choose a length of at least 8 characters and no more than 128 characters'
     );
   }
   var password = generatePassword();
