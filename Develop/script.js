@@ -2,6 +2,7 @@
 var generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
+// character array
 var charArray = [
   'a',
   'b',
@@ -30,10 +31,17 @@ var charArray = [
   'y',
   'z',
 ];
+// number array
 var numArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// function to choose a random index from an array
+function arrPicker(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
+// function to generate the entire password
 function generatePassword() {
-  var arrayIndex = Math.floor(Math.random() * 9);
-  console.log(arrayIndex);
+  console.log(arrPicker(charArray));
 }
 function writePassword() {
   var password = generatePassword();
