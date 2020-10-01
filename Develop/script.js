@@ -33,6 +33,8 @@ var charArray = [
 ];
 // number array
 var numArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+// special character array
+var specChar = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')'];
 
 // function to choose a random index from an array
 function arrPicker(array) {
@@ -44,6 +46,13 @@ function generatePassword() {
   console.log(arrPicker(charArray));
 }
 function writePassword() {
+  alert('Welcome to the random password generator!');
+  alert(
+    'You are going to prompted to choose criteria for your uniquely generated password'
+  );
+  var passLength = prompt(
+    'Choose a length of at least 8 characters and no more than 128 characters'
+  );
   var password = generatePassword();
   var passwordText = document.querySelector('#password');
 
