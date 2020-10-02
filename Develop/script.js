@@ -35,6 +35,8 @@ var charArray = [
 var numArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 // special character array
 var specChar = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')'];
+// generated password array
+var genArray = [];
 
 // function to choose a random index from an array
 function arrPicker(array) {
@@ -63,20 +65,42 @@ function writePassword() {
       'Error: number out of range; choose a length of at least 8 characters and no more than 128 characters'
     );
   }
-  var lCase = confirm('Would you like a Lowercase elements? ok or cancel');
-  var uCase = confirm('Would you like a Uppercase elements? ok or cancel');
-  var num = confirm('Would you like a Number elements? ok or cancel');
-  var sChar = confirm(
+  var isLowercase = confirm(
+    'Would you like a Lowercase elements? ok or cancel'
+  );
+  var isUppercase = confirm(
+    'Would you like a Uppercase elements? ok or cancel'
+  );
+  var isNum = confirm('Would you like a Number elements? ok or cancel');
+  var isSpecialchar = confirm(
     'Would you like Special Characters elements? ok or cancel'
   );
 
-  if (lCase === false && uCase === false && num === false && sChar === false) {
+  if (
+    isLowercase === false &&
+    isUppercase === false &&
+    isNum === false &&
+    isSpecialchar === false
+  ) {
     alert('Error: must choose at least one option;');
-    lCase = confirm('Would you like a Lowercase elements? ok or cancel');
-    uCase = confirm('Would you like a Uppercase elements? ok or cancel');
-    num = confirm('Would you like a Number elements? ok or cancel');
-    sChar = confirm('Would you like Special Characters elements? ok or cancel');
+    isLowercase = confirm('Would you like a Lowercase elements? ok or cancel');
+    isUppercase = confirm('Would you like a Uppercase elements? ok or cancel');
+    isNum = confirm('Would you like a Number elements? ok or cancel');
+    isSpecialchar = confirm(
+      'Would you like Special Characters elements? ok or cancel'
+    );
   }
+
+  // function with one password criteria
+  // if criteria is x
+  // iterate passLength times
+  // then generate random element with the criteria
+  // and save the element to end of generated array
+  // return generated array
+
+  // function with two password criterias
+  // function with three password criterias
+  // function with four password criterias
 
   var password = generatePassword();
   var passwordText = document.querySelector('#password');
