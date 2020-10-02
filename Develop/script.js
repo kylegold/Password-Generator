@@ -77,42 +77,6 @@ var specChar = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')'];
 // generated password array
 var generatedArray = [];
 
-// function to choose a random index from an array
-// function arrPicker(array) {
-//   return array[Math.floor(Math.random() * array.length)];
-// }
-
-// aNum
-// var aNum = arrPicker(numArray);
-// // aLowercase
-// var aLowercase = arrPicker(lowercaseArray);
-// // aUppercase
-// var aUppercase = arrPicker(uppercaseArray);
-// // aSpecialchar
-// var aSpecialchar = arrPicker(specChar);
-
-// console.log(aNum, aLowercase, aUppercase, aSpecialchar);
-
-// function with one password criteria
-// if criteria is x
-// iterate password length times
-// check if password criteria is lowerCase or upperCase numArray or specChar
-// then generate random element with the criteria
-// and save the element to end of generated array
-// return generated array
-
-// function oneCriteria(criteria) {
-//   if (criteria) {
-//     for (var i = 0; i < criteria.length; i++) {
-//       generatedArray.push(arrPicker(criteria));
-//     }
-//     return generatedArray.toString();
-//   }
-// }
-// function with two password criterias
-// function with three password criterias
-// function with four password criterias
-
 // function to generate the entire password
 function generatePassword() {
   // welcoming user and prepping to choose criteria
@@ -122,18 +86,19 @@ function generatePassword() {
     'Choose a length of at least 8 characters and no more than 128 characters'
   );
   console.log(passLength);
-
+  // validate if the password length input is within range. If not alert user and ask again
   if (passLength <= 7 || passLength >= 129) {
     passLength = prompt(
       'Error: number out of range; choose a length of at least 8 characters and no more than 128 characters'
     );
   }
-  if (typeof passLength != 'number') {
+  // validate if the password length input is not a number. Alert user and ask again
+  if (isNaN(passLength)) {
     passLength = prompt(
       'Error: input not a number; choose a length of at least 8 characters and no more than 128 characters'
     );
   }
-
+  // Asking user input on their choice of criteria for the generated password
   var isLowercase = confirm('Would you like Lowercase elements? ok or cancel');
   console.log(isLowercase);
   var isUppercase = confirm('Would you like Uppercase elements? ok or cancel');
@@ -144,7 +109,7 @@ function generatePassword() {
     'Would you like Special Characters elements? ok or cancel'
   );
   console.log(isSpecialchar);
-
+  // validate if no password criteria was chosen if so alert the user and ask again
   while (
     isLowercase === false &&
     isUppercase === false &&
@@ -165,32 +130,36 @@ function generatePassword() {
     );
     console.log(isSpecialchar);
   }
-  // validate if lowercase
+  // validate if user adds lowercase to criteria
   if (isLowercase === true) {
     generatedArray = generatedArray.concat(lowercaseArray);
     console.log(generatedArray);
   }
+  // validate if user adds uppercase to criteria
   if (isUppercase === true) {
     generatedArray = generatedArray.concat(uppercaseArray);
     console.log(generatedArray);
   }
+  // validate if user adds number to criteria
   if (isNum === true) {
     generatedArray = generatedArray.concat(numArray);
     console.log(generatedArray);
   }
+  // validate if user adds special character to criteria
   if (isSpecialchar === true) {
     generatedArray = generatedArray.concat(specChar);
     console.log(generatedArray);
   }
+  // variable to become the generated password
   var generatedPassword = '';
+  // iterating the number of times the password loop. Each time adding a newly generated password element
   for (var i = 0; i < passLength; i++) {
     generatedPassword =
       generatedPassword +
       generatedArray[Math.floor(Math.random() * generatedArray.length)];
     console.log(generatedPassword);
   }
+  // returning the fully generated password with the users criteria
   console.log(generatedPassword);
   return generatedPassword;
-  // console.log(arrPicker(charArray));
-  // console.log(generatedArray.join(', '));
 }
