@@ -1,5 +1,34 @@
 # 03 JavaScript: Password Generator
 
+## Table of Contents
+
+If your README is very long, add a table of contents to make it easy for users to find what they need.
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+
+# Installation
+
+In order to get this project running correctly you will need to download the Password Generator repository which contains a README, the index HTML file which includes the page structure where the password will be generated, the CSS file where the page is style & the Javascript file which handles user alerts, prompts and logic to generate a password which is then display on the webpage to use.
+
+## Usage
+
+The use of this project is to create a random password generator that operates using criteria given to the user to choose from. A user is prompted to choose the length of the password; a number inclusive between 8-128. A user is then prompted to choose 1-4 options: lowercase, uppercase, number, & special character. The password is then generated on the page for the user to use.
+
+## Credits
+
+This javascript file was updated by Kyle Goldfarb.
+
+## License
+
+This project is open to anyone looking for a reference in creating a random password generator with user chosen criteria.
+
+---
+
+---
+
 ## Your Task
 
 This week’s homework requires you to create an application that an employee can use to generate a random password based on criteria they’ve selected by modifying starter code. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished user interface that is responsive, ensuring that it adapts to multiple screen sizes.
@@ -42,52 +71,52 @@ The following image shows the web application's appearance and functionality:
 
 ## Grading Requirements
 
-This homework is graded based on the following criteria: 
+This homework is graded based on the following criteria:
 
 ### Technical Acceptance Criteria: 40%
 
-* Satisfies all of the above acceptance criteria plus the following:
+- Satisfies all of the above acceptance criteria plus the following:
 
-  * The homework should not produce any errors in the console when you inspect it using Chrome DevTools.
+  - The homework should not produce any errors in the console when you inspect it using Chrome DevTools.
 
 ### Deployment: 32%
 
-* Application deployed at live URL.
+- Application deployed at live URL.
 
-* Application loads with no errors.
+- Application loads with no errors.
 
-* Application GitHub URL submitted.
+- Application GitHub URL submitted.
 
-* GitHub repository that contains application code.
+- GitHub repository that contains application code.
 
 ### Application Quality: 15%
 
-* Application user experience is intuitive and easy to navigate.
+- Application user experience is intuitive and easy to navigate.
 
-* Application user interface style is clean and polished.
+- Application user interface style is clean and polished.
 
-* Application resembles the mock-up functionality provided in the homework instructions.
+- Application resembles the mock-up functionality provided in the homework instructions.
 
 ### Repository Quality: 13%
 
-* Repository has a unique name.
+- Repository has a unique name.
 
-* Repository follows best practices for file structure and naming conventions.
+- Repository follows best practices for file structure and naming conventions.
 
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+- Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
 
-* Repository contains multiple descriptive commit messages.
+- Repository contains multiple descriptive commit messages.
 
-* Repository contains quality README file with description, screenshot, and link to deployed application.
-
+- Repository contains quality README file with description, screenshot, and link to deployed application.
 
 ## Review
 
 You are required to submit the following for review:
 
-* The URL of the deployed application.
+- The URL of the deployed application.
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+- The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
 
-- - -
+---
+
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
