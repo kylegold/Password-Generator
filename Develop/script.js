@@ -142,25 +142,27 @@ function generatePassword() {
   );
   console.log(isSpecialchar);
 
-  // while (
-  //   isLowercase === false &&
-  //   isUppercase === false &&
-  //   isNum === false &&
-  //   isSpecialchar === false
-  // ) {
-  //   alert('Error: must choose at least one option;');
-  //   isLowercase = confirm('Would you like a Lowercase elements? ok or cancel');
-  //   console.log(isLowercase);
-  //   isUppercase = confirm('Would you like a Uppercase elements? ok or cancel');
-  //   console.log(isUppercase);
-  //   isNum = confirm('Would you like a Number elements? ok or cancel');
-  //   console.log(isNum);
-  //   isSpecialchar = confirm(
-  //     'Would you like Special Characters elements? ok or cancel'
-  //   );
-  //   console.log(isSpecialchar);
-  // }
-
+  while (
+    isLowercase === false &&
+    isUppercase === false &&
+    isNum === false &&
+    isSpecialchar === false
+  ) {
+    alert('Error: must choose at least one option;');
+    var isLowercase = confirm(
+      'Would you like a Lowercase elements? ok or cancel'
+    );
+    console.log(isLowercase);
+    isUppercase = confirm('Would you like a Uppercase elements? ok or cancel');
+    console.log(isUppercase);
+    isNum = confirm('Would you like a Number elements? ok or cancel');
+    console.log(isNum);
+    isSpecialchar = confirm(
+      'Would you like Special Characters elements? ok or cancel'
+    );
+    console.log(isSpecialchar);
+  }
+  // validate if lowercase
   if (isLowercase === true) {
     generatedArray = generatedArray.concat(lowercaseArray);
     console.log(generatedArray);
