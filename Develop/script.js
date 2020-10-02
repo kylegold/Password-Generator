@@ -122,15 +122,13 @@ function generatePassword() {
     'Choose a length of at least 8 characters and no more than 128 characters'
   );
   console.log(passLength);
-  // if (isNAN(passLength)) {
-  //   passLength = prompt(
-  //     'Error: not a number; choose a length of at least 8 characters and no more than 128 characters'
-  //   );
-  // } else if (passLength <= 7 || passLength >= 129) {
-  //   passLength = prompt(
-  //     'Error: number out of range; choose a length of at least 8 characters and no more than 128 characters'
-  //   );
-  // }
+
+  if (passLength <= 7 || passLength >= 129) {
+    passLength = prompt(
+      'Error: number out of range; choose a length of at least 8 characters and no more than 128 characters'
+    );
+  }
+
   var isLowercase = confirm('Would you like Lowercase elements? ok or cancel');
   console.log(isLowercase);
   var isUppercase = confirm('Would you like Uppercase elements? ok or cancel');
