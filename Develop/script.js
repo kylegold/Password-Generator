@@ -128,6 +128,11 @@ function generatePassword() {
       'Error: number out of range; choose a length of at least 8 characters and no more than 128 characters'
     );
   }
+  if (typeof passLength != 'number') {
+    passLength = prompt(
+      'Error: input not a number; choose a length of at least 8 characters and no more than 128 characters'
+    );
+  }
 
   var isLowercase = confirm('Would you like Lowercase elements? ok or cancel');
   console.log(isLowercase);
